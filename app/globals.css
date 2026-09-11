@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-neutral-50 text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100;
+}
+
+/* React Flow tweaks */
+.react-flow__controls-button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.react-flow__node-editable,
+.react-flow__node-emoji {
+  border-radius: 0.5rem;
+}
+
+.react-flow__node.selected .editable-node {
+  box-shadow: 0 0 0 2px rgb(14 165 233 / 0.6);
+}
