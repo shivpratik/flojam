@@ -18,6 +18,8 @@ export function RoomClient({ code }: { code: string }) {
   const [identity, setIdentity] = useState<Identity | null | undefined>();
 
   useEffect(() => {
+    // localStorage is client-only, so it's read after hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIdentity(getIdentity());
   }, []);
 

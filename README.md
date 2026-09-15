@@ -1,5 +1,7 @@
 # FloJam — collaborative diagrams
 
+[![CI](https://github.com/shivpratik/flojam/actions/workflows/ci.yml/badge.svg)](https://github.com/shivpratik/flojam/actions/workflows/ci.yml)
+
 A real-time, multiplayer flowchart editor. Create a room, share the code or invite link,
 and build diagrams together with live cursors, presence avatars and shared undo/redo.
 

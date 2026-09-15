@@ -25,6 +25,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
+    // Sync with the class set by themeScript once hydrated.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(
       document.documentElement.classList.contains("dark") ? "dark" : "light"
     );

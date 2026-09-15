@@ -33,6 +33,8 @@ export default function Home() {
 
   useEffect(() => {
     const identity = getIdentity();
+    // localStorage is client-only, so it's read after hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (identity) setName(identity.name);
   }, []);
 
